@@ -3,6 +3,7 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
+	const bgColor = useColorModeValue("white", "gray.800");
 	const borderColor = useColorModeValue("gray.200", "gray.600");
 
 	return (
@@ -13,6 +14,7 @@ const Navbar = () => {
 			py=".5rem"
 			px="1rem"
 			as="nav"
+			bg={bgColor}
 			borderBottom="1px"
 			borderColor={borderColor}
 			position="sticky"
