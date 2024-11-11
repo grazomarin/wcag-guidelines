@@ -1,5 +1,6 @@
-import { Box, Heading, useColorMode, IconButton, useColorModeValue } from "@chakra-ui/react";
+import { Box, Heading, useColorMode, IconButton, useColorModeValue, Flex } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import AvatarLinks from "./AvatarLinks";
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -22,7 +23,13 @@ const Navbar = () => {
 			top="0px"
 			zIndex="1000"
 		>
-			<Heading fontSize="1.5rem">Accessibility Guidelines Simplified</Heading>
+			<Flex
+				alignItems="center"
+				gap="1rem"
+			>
+				<Heading fontSize="1.5rem">W4A</Heading>
+				<AvatarLinks />
+			</Flex>
 			<IconButton
 				aria-label="toggle color mode"
 				icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
